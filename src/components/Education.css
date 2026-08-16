@@ -1,0 +1,197 @@
+.education {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg-primary);
+  position: relative;
+}
+
+.education__track {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.education__track-rails {
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+}
+
+.education__track-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 1.5px;
+  background: linear-gradient(to bottom,
+    rgba(74, 122, 232, 0.4),
+    rgba(74, 122, 232, 0.2)
+  );
+}
+
+.education__track-rail--left {
+  left: 0;
+}
+
+.education__track-rail--right {
+  right: 0;
+}
+
+.education__track-ties {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+  right: -2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 16px,
+    rgba(74, 122, 232, 0.15) 16px,
+    rgba(74, 122, 232, 0.15) 20px
+  );
+}
+
+.education__track-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom,
+    var(--color-accent),
+    var(--color-accent-dim)
+  );
+  box-shadow: 0 0 12px rgba(74, 122, 232, 0.4);
+  border-radius: 1px;
+}
+
+.education__card-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.education__card-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.education__signal {
+  position: absolute;
+  left: -48px;
+  top: 24px;
+  z-index: 2;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-bg-primary);
+  border: 2px solid rgba(74, 122, 232, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education__signal-light {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+  transition: all 0.3s;
+}
+
+.education__signal-light--active {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.education__card {
+  padding: 28px 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-card);
+  transition: all 0.3s;
+}
+
+.education__card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.education__card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.education__card-degree {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.education__card-institution {
+  font-size: 15px;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.education__card-location {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.education__card-period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.education__card-current {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(74, 122, 232, 0.1);
+  color: var(--color-accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .education__track {
+    padding-left: 40px;
+  }
+
+  .education__signal {
+    left: -30px;
+  }
+
+  .education__track-rails {
+    left: 0;
+    width: 20px;
+  }
+
+  .education__card {
+    padding: 20px;
+  }
+
+  .education__card-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .education__card-period {
+    flex-direction: row;
+    align-items: center;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Read(//Users/adityarahalkar/claude_testing/**)",
+      "Bash(npx create-vite@latest personal_website --template react)",
+      "Bash(npm init:*)",
+      "Read(//private/tmp/**)",
+      "Bash(npx --yes create-vite@latest test_vite_check --template react)",
+      "Bash(rm -rf /private/tmp/test_vite_check)",
+      "Bash(npx --yes create-vite@latest /Users/adityarahalkar/claude_testing/personal_website --template react)",
+      "Bash(npx --yes create-vite@latest personal_site_scaffold --template react)",
+      "Bash(cp -r /tmp/personal_site_scaffold/* /Users/adityarahalkar/claude_testing/personal_website/)",
+      "Bash(cp /tmp/personal_site_scaffold/.gitignore /Users/adityarahalkar/claude_testing/personal_website/)",
+      "Bash(cp /tmp/personal_site_scaffold/.eslintrc.cjs /Users/adityarahalkar/claude_testing/personal_website/)",
+      "Bash(rm -rf /tmp/personal_site_scaffold)",
+      "Bash(npm install:*)",
+      "Bash(npx vite:*)",
+      "Bash(brew install:*)",
+      "Bash(pdftoppm -v)",
+      "Bash(pdftotext:*)",
+      "WebFetch(domain:scholar.google.com)",
+      "Bash(npm list:*)",
+      "Bash(vercel deploy:*)",
+      "Bash(vercel project:*)",
+      "Bash(vercel ls:*)",
+      "Bash(vercel domains:*)",
+      "Bash(vercel inspect:*)",
+      "Bash(vercel env:*)"
+    ]
+  }
+}

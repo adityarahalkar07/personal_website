@@ -1,0 +1,322 @@
+.publications {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg-primary);
+  position: relative;
+}
+
+.publications__metrics {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.publications__metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.publications__metric-number {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+
+.publications__metric-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.publications__filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.publications__filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.publications__filter:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
+}
+
+.publications__filter--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg-primary);
+  font-weight: 500;
+}
+
+.publications__filter-count {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.publications__timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Railroad track */
+.publications__track {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  transform: translateX(-50%);
+}
+
+.publications__track-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 1.5px;
+  background: linear-gradient(to bottom,
+    rgba(74, 122, 232, 0.4),
+    rgba(74, 122, 232, 0.2)
+  );
+}
+
+.publications__track-rail--left {
+  left: 0;
+}
+
+.publications__track-rail--right {
+  right: 0;
+}
+
+.publications__track-ties {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+  right: -2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 16px,
+    rgba(74, 122, 232, 0.15) 16px,
+    rgba(74, 122, 232, 0.15) 20px
+  );
+}
+
+.publications__track-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom,
+    var(--color-accent),
+    var(--color-accent-dim)
+  );
+  box-shadow: 0 0 12px rgba(74, 122, 232, 0.4);
+  border-radius: 1px;
+}
+
+.publications__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.publications__item--left {
+  padding-right: calc(50% + 40px);
+}
+
+.publications__item--right {
+  padding-left: calc(50% + 40px);
+}
+
+.publications__item-signal {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-bg-primary);
+  border: 2px solid rgba(74, 122, 232, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publications__item-signal-light {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.publications__item:hover .publications__item-signal-light {
+  transform: scale(1.4);
+}
+
+.publications__item-card {
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-card);
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.publications__item-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+}
+
+.publications__item-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.publications__item-badge {
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.publications__item-year {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.publications__item-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.publications__item-authors {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.publications__item-venue {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.publications__item-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.publications__item-citations {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(74, 122, 232, 0.08);
+}
+
+.publications__item-paper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(74, 122, 232, 0.08);
+  transition: all 0.3s;
+}
+
+.publications__item-paper:hover {
+  background: rgba(74, 122, 232, 0.15);
+  color: var(--color-accent-bright);
+}
+
+.publications__item-slides {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-red);
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(204, 51, 51, 0.08);
+  transition: all 0.3s;
+}
+
+.publications__item-slides:hover {
+  background: rgba(204, 51, 51, 0.15);
+  color: var(--color-red-bright);
+}
+
+@media (max-width: 768px) {
+  .publications__metrics {
+    gap: 24px;
+  }
+
+  .publications__metric-number {
+    font-size: 28px;
+  }
+
+  .publications__track {
+    left: 20px;
+    transform: none;
+  }
+
+  .publications__item--left,
+  .publications__item--right {
+    padding-left: 52px;
+    padding-right: 0;
+  }
+
+  .publications__item-signal {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+}
